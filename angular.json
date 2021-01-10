@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "angular-idea-hello"
+  "defaultProject": "angular-idea-hello",
+  "cli": {
+    "analytics": "578242f9-9fc8-4ac1-ac3f-81f7fa09d7a5"
+  }
 }
