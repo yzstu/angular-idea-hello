@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Blog} from '../blog';
 
 @Component({
@@ -11,10 +11,17 @@ export class BlogChildComponent implements OnInit {
   @Input() blog: Blog;
   // tslint:disable-next-line:no-input-rename
   @Input('author') authorName: string;
+  @Output() like = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // tslint:disable-next-line:typedef
+  addLike(value: string) {
+    this.like.emit(value);
+  }
+
 
 }

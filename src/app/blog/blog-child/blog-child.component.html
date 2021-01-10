@@ -1,3 +1,6 @@
 <h3>{{blog.title}}</h3>
 <p>Author:{{authorName}}</p>
 <p>{{blog.content}}</p>
+
+<label>I like the blog, and my name is: <input #guestName></label>
+<button (click)="addLike(guestName.value)">Add</button>

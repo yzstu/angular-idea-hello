@@ -1,4 +1,10 @@
 <app-blog-child *ngFor="let blog of blogs"
                 [blog] = "blog"
-                [author]="author">
+                [author]="author"
+                (like)="addItem($event)">
 </app-blog-child>
+
+<p>Here is someone like my blogs:</p>
+<ul>
+  <li *ngFor="let user of register">{{user}}</li>
+</ul>

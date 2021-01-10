@@ -10,10 +10,16 @@ export class BlogParentComponent implements OnInit {
 
   blogs = BLOG;
   author = 'Baldwin';
+  register = ['Jack', 'Tom', 'Joy'];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // tslint:disable-next-line:typedef
+  addItem(newItem: string) {
+    this.register.push(newItem);
   }
 
 }
